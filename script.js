@@ -41,6 +41,27 @@ var movieObject = {
 
 //Practice two:
 
+// Jordan's example code 
+// The contents of this object will change depending on what today's special is
+// var currentSpecial = {
+//     name: "Fried Green Tomato BLT",
+//     description: "So good you'll cry",
+//     price: 9.99
+//   }
+//   // We'll use the object to build up an HTML string 
+//   var htmlString = `
+//     <h3 class="dish-name">${currentSpecial.name}</h3>
+//     <p class="dish-description">
+//       ${currentSpecial.description}
+//     </p>
+//     <h5 class= "dish-price">${currentSpecial.price}</h5>
+//   `
+//   // Then we'll put the html string in the #daily-special div
+//   document.querySelector("#daily-special").innerHTML = htmlString;
+
+// The variable 'movieSchedule' is an array with an object inside of it
+// 
+// Remember to start counting from zero!
 var movieSchedule = [
     {
       title: "Ralph Breaks the Internet",
@@ -58,27 +79,12 @@ var movieSchedule = [
       poster: "https://images-na.ssl-images-amazon.com/images/I/716fk%2BBZ-NL._SY606_.jpg"
     }
   ]
-
-//   // The contents of this object will change depending on what today's special is
-// var currentSpecial = {
-//     name: "Fried Green Tomato BLT",
-//     description: "So good you'll cry",
-//     price: 9.99
-//   }
-  
-//   // We'll use the object to build up an HTML string 
-//   var htmlString = `
-//     <h3 class="dish-name">${currentSpecial.name}</h3>
-//     <p class="dish-description">
-//       ${currentSpecial.description}
-//     </p>
-//     <h5 class= "dish-price">${currentSpecial.price}</h5>
-//   `
-//   // Then we'll put the html string in the #daily-special div
-//   document.querySelector("#daily-special").innerHTML = htmlString;
-
+// console log to see what the array looks like
 console.log(movieSchedule);
-
+//Create a variable that contains all of the movie information for each object inside the array
+//You have to call each item using the following: ${movieSchedule[x].subcategory}
+// you can hardcode HTML elements within Java script.
+// you can also do any style attributes but this NOT RECOMMENDED!  syntax style = "color:blue;font-size:20em"
 var htmlString = `
 <h3 class ="title">${movieSchedule[0].title}</h3>
 <p class = "rating">Rated: ${movieSchedule[0].rating}<p>
@@ -91,10 +97,9 @@ var htmlString = `
 <h3 class ="title">${movieSchedule[2].title}</h3>
 <p class = "rating">Rated: ${movieSchedule[2].rating}<p>
 <img class = "movie-poster" src=${movieSchedule[2].poster} alt = Movie Poster"/>
-
-
 `
-
+//Don't forget the easy-to-miss ` characters at the beginning and the end.  This tells Java that you
+//are making a string with text & script (string interpolation)
 console.log(htmlString);
 
 document.querySelector("#movie-schedule").innerHTML = htmlString;
